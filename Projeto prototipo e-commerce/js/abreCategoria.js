@@ -13,7 +13,7 @@ var categoria = document.querySelector('.categoria-topo');
 			recolheMenu:function(){
 			categoria.addEventListener('mouseleave',function(){
 			categoria.classList.remove('mostraCategoria');
-			seletor.style.color="#120A8f";
+			seletor.style.color="royalblue";
 		});
 					},
 		ativaMenuClick:function(){
