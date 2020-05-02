@@ -1,9 +1,11 @@
 var seletor = document.getElementById('seletor-cat');
 var categoria = document.querySelector('.categoria-topo');	
-	
+var mediaQuery =window.matchMedia("(max-width:800px)");
+var menuActive =document.querySelector('#menu-icon');
+var menu =document.querySelector('.menu');
 	
 	var menuCategorias = {
-			mostraCategoria:function(){
+			mostraCategoria:function(){				
 			seletor.addEventListener('mouseover',function(){
 			categoria.classList.add('mostraCategoria');
 			seletor.style.color="lightblue";
@@ -20,8 +22,17 @@ var categoria = document.querySelector('.categoria-topo');
 			seletor.addEventListener('click',function(){
 				categoria.classList.toggle('mostraCategoria');
 			});
+		},
+		ativaMenu:function(){
+			if(mediaQuery){
+				menuActive.addEventListener('click',function(){
+					menu.classList.toggle('menuAtive');
+				});
+			}
+
 		}
 	}	
+	menuCategorias.ativaMenu();
 	menuCategorias.ativaMenuClick();
 	menuCategorias.mostraCategoria();
 	menuCategorias.recolheMenu();
