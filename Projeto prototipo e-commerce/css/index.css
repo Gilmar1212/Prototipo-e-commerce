@@ -7,11 +7,9 @@ body{
 	background-color:#F8F8FF;
 }
 .Categoria{
-	display:flex;
-	flex:1;
-	flex-wrap: wrap;
-	margin-top:20px;
-	margin-left:90px;
+	display:block;
+	float:right;
+	margin-right:170px;
 }
 
 #titulo{
@@ -76,13 +74,14 @@ footer h1{
 	border-radius:10px;
 	min-width:0%;
 	height:0px;
-	opacity:0;
 	transition:0.5s;
-	margin-left:100px;
+	margin-left:30px;
 	margin-top:-38px;
 	text-align:center;
 }
-
+.desaparece{
+	opacity:0;
+}
 .categoria-topo li{
 	position:relative;
 	margin-top:40px;
@@ -91,10 +90,9 @@ footer h1{
 	width:100%;
 	font-weight:bold;
 	color:white;
-
 }
 
-.categoria-topo li:hover {
+.categoria-topo li:hover{
 	background-color:lightblue;
 	color:black;
 }
@@ -110,7 +108,7 @@ footer h1{
 	z-index:2;
 	cursor:pointer;
 	text-align:center;
-	margin-top:-15px;
+	margin-top:-67px;
 	font-weight: bold;
 	width:200px;
 }
@@ -133,7 +131,6 @@ footer h1{
 }
 .menu li:hover{
 	transform:scale(1.1);
-	border-radius:5%;
 	transition:0.5s;
 }
 
@@ -186,7 +183,7 @@ footer h1{
 }
 .product-content figure{
 	width:70%;
-	height:270px;
+	height:inherit;
 	transition:0.5s;
 }
 .product-content figure:hover{
@@ -268,6 +265,7 @@ footer h1{
 		max-height:inherit;
 	}
 }
+
 @media(max-width: 867px){
 	#menu-icon{
 		position:relative;
@@ -308,24 +306,15 @@ footer h1{
 		width:100%;
 		height:20px;
 	}
-	.Categoria{
-		margin-top:-420px;
-		margin-left:58px;
-		width:57%;
-	}
-	#seletor-cat{
-		float:right;
-		display:flex;
-		flex-wrap:nowrap;
-		margin-top:-450px;
-		margin-left:20px;
-		height:0px;
-	}
-	#seletor-cat img{
-		margin-top:5px;
-		margin-right:100px ;
-	}
+	
 	input{
 		width:40%;
+	}
+}
+@media(width:662px){
+	#seletor-cat{
+		display:inline-block;
+		margin-top:-900px;
+		width:57%;
 	}
 }

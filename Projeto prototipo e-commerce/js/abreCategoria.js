@@ -1,5 +1,5 @@
 var seletor = document.getElementById('seletor-cat');
-var categoria = document.querySelector('.categoria-topo');	
+var categoria = document.querySelector('.desaparece');	
 var mediaQuery =window.matchMedia("(max-width:800px)");
 var menuActive =document.querySelector('#menu-icon');
 var menu =document.querySelector('.menu');
